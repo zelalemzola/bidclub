@@ -1,0 +1,14 @@
+node_modules
+.turbo
+.next
+dist
+.DS_Store
+*.log
+.env
+.env.local
+.env*.local
+!.env.example
+apps/*/.env.local
+.vercel
+*.tsbuildinfo
+next-env.d.ts

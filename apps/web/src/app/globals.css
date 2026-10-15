@@ -1,0 +1,135 @@
+@import "@bidclub/ui/globals.css";
+
+@source "../../../../packages/ui/src";
+@source "../";
+
+:root {
+  --font-display: var(--font-display-face), var(--font-ethiopic-face), "Poppins", "Noto Sans Ethiopic", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-sans-face), var(--font-ethiopic-face), "Poppins", "Noto Sans Ethiopic", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-face), "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* Flip clock — lime vault on light UI */
+.bc-flip-clock {
+  --fcc-flip-duration: 0.55s;
+  --fcc-spacing: 10px;
+  --fcc-digit-block-width: 38px;
+  --fcc-digit-block-height: 56px;
+  --fcc-digit-block-radius: 10px;
+  --fcc-digit-block-spacing: 4px;
+  --fcc-digit-font-size: 28px;
+  --fcc-digit-color: #f7ffe8;
+  --fcc-label-font-size: 10px;
+  --fcc-label-color: #7a847c;
+  --fcc-background: linear-gradient(180deg, #2a2e28 0%, #141614 100%);
+  --fcc-divider-color: rgba(197, 240, 66, 0.35);
+  --fcc-divider-height: 1px;
+  --fcc-separator-size: 6px;
+  --fcc-separator-color: #c5f042;
+  --fcc-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.bc-flip-clock--compact {
+  --fcc-spacing: 6px;
+  --fcc-digit-block-width: 22px;
+  --fcc-digit-block-height: 30px;
+  --fcc-digit-font-size: 13px;
+  --fcc-label-font-size: 8px;
+  --fcc-separator-size: 4px;
+}
+
+.bc-flip-clock--urgent {
+  --fcc-digit-color: #ffc9c7;
+  --fcc-separator-color: #e53935;
+  --fcc-divider-color: rgba(229, 57, 53, 0.4);
+}
+
+@media (max-width: 480px) {
+  .bc-flip-clock:not(.bc-flip-clock--compact) {
+    --fcc-digit-block-width: 34px;
+    --fcc-digit-block-height: 48px;
+    --fcc-digit-font-size: 22px;
+  }
+}
+
+@layer utilities {
+  .nav-pill-glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(20, 22, 20, 0.08);
+    box-shadow: 0 10px 30px rgba(16, 18, 16, 0.08);
+  }
+
+  .header-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(230, 233, 227, 0.92) 0%,
+      rgba(230, 233, 227, 0.55) 55%,
+      transparent 100%
+    );
+  }
+
+  .bc-card-media {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.35rem;
+    background: #f0f2ed;
+  }
+
+  /* Soft hairline + curve field for home cards (matches PageBackdrop language) */
+  .bc-card-pattern {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .bc-card-pattern::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.55;
+    background-image:
+      repeating-linear-gradient(
+        -18deg,
+        transparent 0,
+        transparent 18px,
+        rgba(107, 143, 18, 0.055) 18px,
+        rgba(107, 143, 18, 0.055) 19px
+      ),
+      repeating-linear-gradient(
+        72deg,
+        transparent 0,
+        transparent 42px,
+        rgba(20, 22, 20, 0.03) 42px,
+        rgba(20, 22, 20, 0.03) 43px
+      );
+  }
+  .bc-card-pattern::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.7;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 320' preserveAspectRatio='none'%3E%3Cpath d='M-20,70 C160,20 320,130 480,55 S700,30 760,95' fill='none' stroke='rgba(155,196,30,0.22)' stroke-width='1.2'/%3E%3Cpath d='M-30,180 C180,110 340,240 520,150 S700,140 780,210' fill='none' stroke='rgba(20,22,20,0.07)' stroke-width='1'/%3E%3Cpath d='M40,-10 C100,90 60,190 140,300' fill='none' stroke='rgba(155,196,30,0.14)' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .bc-scroll-row {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .bc-scroll-row::-webkit-scrollbar {
+    display: none;
+  }
+  .bc-scroll-row > * {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
+}

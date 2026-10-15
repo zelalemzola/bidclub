@@ -1,0 +1,38 @@
+/**
+ * Light UniteCar system — subtle page accents only.
+ * Global sage field + lime CTAs live in @bidclub/ui globals.
+ */
+
+.page-theme {
+  --page-radius: 1.25rem;
+}
+
+.page-theme-bg {
+  display: none;
+}
+
+[data-page="home"] .font-display {
+  letter-spacing: -0.035em;
+}
+
+[data-page="arenas"] .font-display {
+  letter-spacing: -0.04em;
+}
+
+[data-page="bid"] .font-display {
+  letter-spacing: -0.03em;
+}
+
+[data-page="winners"] .font-display {
+  letter-spacing: -0.03em;
+}
+
+[data-page="auth"] .vault-panel,
+[data-page="auth"] .glass-panel {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+[data-page="legal"] article p {
+  max-width: 42rem;
+  line-height: 1.8;
+}

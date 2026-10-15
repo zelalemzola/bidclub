@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+/**
+ * BidClub — UniteCar-inspired light auction system
+ * Soft sage field, white surfaces, lime CTAs, Poppins geometry.
+ */
+@theme inline {
+  --color-night: #101210;
+  --color-charcoal: #1a1d1a;
+  --color-stone: #e6e9e3;
+  --color-paper: #ffffff;
+  --color-ink: #141614;
+  --color-ink-soft: #4a524c;
+  --color-mute: #7a847c;
+  --color-line: rgba(20, 22, 20, 0.08);
+  /* Lime accent (mapped to "gold" tokens so existing classes keep working) */
+  --color-gold: #c5f042;
+  /* Readable on light surfaces — use for text; fills still use .gold-fill */
+  --color-gold-bright: #6b8f12;
+  --color-gold-deep: #9bc41e;
+  --color-gold-dim: #5a7318;
+  --color-danger: #e53935;
+  --color-success: #2e9b6a;
+  --color-rose: #e53935;
+  --color-teal: #2e9b6a;
+  --color-cream: #f4f6f2;
+  --color-cream-deep: #eef1eb;
+  --color-champagne: #e8f2c8;
+  --color-void: #101210;
+  --color-panel: #ffffff;
+  --color-panel-elevated: #ffffff;
+  --color-muted: #7a847c;
+  --color-background: #e6e9e3;
+  --color-foreground: var(--color-ink);
+  --color-card: #ffffff;
+  --color-card-foreground: var(--color-ink);
+  --color-primary: var(--color-gold);
+  --color-primary-foreground: #101210;
+  --color-secondary: #101210;
+  --color-secondary-foreground: #ffffff;
+  --color-accent: var(--color-gold-bright);
+  --color-accent-foreground: #101210;
+  --color-destructive: var(--color-danger);
+  --color-destructive-foreground: #ffffff;
+  --color-border: var(--color-line);
+  --color-input: rgba(20, 22, 20, 0.06);
+  --color-ring: var(--color-gold-deep);
+  --color-muted-foreground: var(--color-mute);
+  --font-display: var(--font-display-face), var(--font-ethiopic-face), "Poppins", "Noto Sans Ethiopic", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-sans-face), var(--font-ethiopic-face), "Poppins", "Noto Sans Ethiopic", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-face), "JetBrains Mono", ui-monospace, monospace;
+  --font-serif: var(--font-sans);
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: light;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    background: linear-gradient(165deg, #eef1ec 0%, #e2e6df 42%, #d8ddd4 100%);
+    background-attachment: fixed;
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+    font-weight: 700;
+  }
+
+  .font-serif {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer utilities {
+  .gold-fill {
+    background: linear-gradient(165deg, #d8ff5c 0%, #c5f042 55%, #9bc41e 100%);
+    color: #101210;
+  }
+
+  .gold-text {
+    color: #6f8f1a;
+  }
+
+  .vault-panel {
+    background: #ffffff;
+    border: 1px solid rgba(20, 22, 20, 0.06);
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 40px rgba(16, 18, 16, 0.06);
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(18px) saturate(1.15);
+    -webkit-backdrop-filter: blur(18px) saturate(1.15);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 1.35rem;
+    box-shadow: 0 12px 40px rgba(16, 18, 16, 0.07);
+  }
+
+  /* Frameless product surface — UniteCar card language */
+  .frame-free {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .nav-glass {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(20px) saturate(1.2);
+    -webkit-backdrop-filter: blur(20px) saturate(1.2);
+    border: 1px solid rgba(20, 22, 20, 0.08);
+    box-shadow: 0 12px 36px rgba(16, 18, 16, 0.1);
+  }
+
+  .nav-pill {
+    background: linear-gradient(165deg, #d8ff5c 0%, #c5f042 55%, #9bc41e 100%);
+    box-shadow: 0 4px 16px rgba(155, 196, 30, 0.35);
+  }
+
+  .bc-lattice {
+    background-image: none;
+  }
+
+  .hero-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(230, 233, 227, 0.15) 0%,
+      rgba(230, 233, 227, 0.35) 45%,
+      rgba(230, 233, 227, 0.92) 100%
+    );
+  }
+
+  .live-pulse {
+    animation: live-pulse 1.8s ease-in-out infinite;
+  }
+
+  .float-in {
+    animation: float-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .float-in-delay {
+    animation: float-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+  }
+
+  @keyframes live-pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.35;
+    }
+  }
+
+  @keyframes float-in {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .live-pulse,
+    .float-in,
+    .float-in-delay {
+      animation: none !important;
+    }
+  }
+}

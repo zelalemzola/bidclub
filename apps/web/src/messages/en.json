@@ -1,0 +1,578 @@
+{
+  "Common": {
+    "loading": "Loading…",
+    "errorGeneric": "Something went wrong. Please try again.",
+    "errorConnection": "Connection error. Please check your network and try again.",
+    "etb": "ETB",
+    "back": "Back",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "close": "Close",
+    "learnMore": "Learn more",
+    "save": "Save",
+    "confirm": "Confirm",
+    "retry": "Try again",
+    "yes": "Yes",
+    "no": "No",
+    "optional": "Optional",
+    "required": "Required",
+    "seeAll": "See all"
+  },
+  "Nav": {
+    "home": "Home",
+    "arenas": "Arenas",
+    "winners": "Winners",
+    "profile": "Profile",
+    "login": "Log in",
+    "join": "Join",
+    "activate": "Activate",
+    "signOut": "Sign out",
+    "howItWorks": "How it works",
+    "menu": "Menu"
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "BidClub",
+      "title": "Win the prize. Not the bidding war.",
+      "subtitle": "Lock a sealed number in Ethiopian birr. Stay anonymous. After {days} days, the lowest unique bid takes the drop.",
+      "asideTitle": "Lowest unique wins",
+      "asideBody": "Nobody sees your number. When the clock hits zero, the rarest low bid takes the prize.",
+      "ctaJoin": "Join BidClub",
+      "ctaActivate": "Activate account",
+      "ctaOpenSeat": "Open my seat",
+      "ctaBrowse": "Browse arenas"
+    },
+    "stats": {
+      "feesFrom": "Fees from",
+      "activate": "Activate",
+      "timer": "Timer",
+      "etbUnit": "ETB",
+      "daysUnit": "days"
+    },
+    "pillars": {
+      "eyebrow": "Why BidClub",
+      "title": "Built for fair sealed play",
+      "items": [
+        {
+          "title": "Sealed vault",
+          "body": "Your number stays locked. No peeking, no copying, no last-second snipes."
+        },
+        {
+          "title": "Unique or bust",
+          "body": "Ties are out. Only the lowest amount nobody else chose takes the prize."
+        },
+        {
+          "title": "{days}-day timer",
+          "body": "Every product runs on the clock. When time hits zero, the arena closes and reveals."
+        }
+      ]
+    },
+    "liveSection": {
+      "eyebrow": "Live now",
+      "title": "Open arenas",
+      "liveBadge": "{count} live",
+      "filterAll": "Filter all",
+      "prevPage": "Previous page",
+      "nextPage": "Next page",
+      "pageOf": "{page} / {total}",
+      "errorTitle": "Couldn't load arenas",
+      "errorBody": "{error} Pull to refresh — your bids stay safe.",
+      "emptyTitle": "No open arenas right now",
+      "emptyBody": "New prize drops land regularly. Activate now so you can bid the second one opens."
+    },
+    "prizeLanes": {
+      "eyebrow": "What drops",
+      "title": "Prize lanes we run",
+      "winnersCta": "Winners",
+      "items": [
+        { "label": "Tech & gaming", "hint": "Consoles, phones, headphones" },
+        { "label": "Lifestyle", "hint": "Watches, gifts, experiences" },
+        { "label": "Big ticket", "hint": "Screens, laptops, surprise drops" }
+      ]
+    },
+    "recentlyDecided": {
+      "title": "Recently decided",
+      "allWinners": "All winners"
+    },
+    "playbook": {
+      "eyebrow": "Playbook",
+      "title": "How winners think",
+      "tips": [
+        "Avoid round numbers — 5.00 and 10.00 get crowded fast.",
+        "A mid-low odd amount (like 7.37) often beats the pile-up at 1.00.",
+        "You can lock multiple sealed bids in one arena before the timer ends.",
+        "Watch the {days}-day clock — when it hits zero, the arena closes."
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good to know",
+      "title": "Questions",
+      "items": [
+        {
+          "q": "What does lowest unique bid mean?",
+          "a": "When the arena closes we scan every sealed bid. The lowest amount that only one person chose wins — not the highest bid, and not a number two people tied on."
+        },
+        {
+          "q": "Can anyone see my bid?",
+          "a": "No. Bids stay sealed until reveal. You only ever see your own history inside an arena."
+        },
+        {
+          "q": "How much does it cost?",
+          "a": "Activate once for {registrationFee} ETB. After that each sealed bid is {bidFee} ETB. Bid as many times as you want before the timer ends."
+        },
+        {
+          "q": "What numbers can I pick?",
+          "a": "Any amount from 0.00 to {maxBid}.00 ETB. Unusual numbers beat crowded round ones."
+        },
+        {
+          "q": "When does an arena close?",
+          "a": "After {days} days — the countdown is the only closer. Winner = lowest unique bid when the clock hits zero."
+        }
+      ]
+    },
+    "ctaBand": {
+      "eyebrow": "Low entry · fair odds",
+      "title": "Fees set per product",
+      "body": "Each arena has its own bid fee. Nobody sees your number — the {days}-day timer and uniqueness decide.",
+      "cta": "Browse arenas"
+    },
+    "footerTag": "BidClub · sealed lowest-unique arenas · {days}-day timer"
+  },
+  "Arenas": {
+    "eyebrow": "Arenas",
+    "title": "Browse live & closed arenas",
+    "subtitle": "Filter by bid fee and sort — each product can have its own entry fee set by BidClub.",
+    "searchPlaceholder": "Search arenas…",
+    "filterLabel": "Filter",
+    "status": {
+      "live": "Live",
+      "ended": "Ended",
+      "all": "All"
+    },
+    "fee": {
+      "all": "Any fee",
+      "low": "≤ 50",
+      "mid": "51–100",
+      "high": "100+"
+    },
+    "sortLabel": "Sort",
+    "sort": {
+      "ending": "Ending soon",
+      "newest": "Newest",
+      "bids": "Most bids",
+      "feeAsc": "Fee ↑",
+      "feeDesc": "Fee ↓"
+    },
+    "count": "{count, plural, =0 {No arenas} one {# arena} other {# arenas}}",
+    "loading": "Loading…",
+    "errorTitle": "Couldn't load arenas",
+    "errorBody": "{error}",
+    "emptyTitle": "No arenas match",
+    "emptyBody": "Try clearing filters or adjusting your search."
+  },
+  "AuctionCard": {
+    "result": "Result",
+    "enter": "Enter",
+    "sealed": "{count} sealed",
+    "closed": "Closed · see result",
+    "elapsed": "{count} sealed · {elapsed}% elapsed"
+  },
+  "WinnerCard": {
+    "badge": "Won",
+    "winnerLabel": "Winner",
+    "fallbackWinner": "Sealed winner",
+    "winningBid": "Winning sealed bid",
+    "noWinner": "No unique winner this round",
+    "viewArena": "View arena"
+  },
+  "WinnerReveal": {
+    "badge": "Winner revealed",
+    "subtitle": "Lowest sealed bid that no one else matched",
+    "finalAmount": "Final amount · {amount} birr, unsealed now that the arena is closed"
+  },
+  "CountdownTimer": {
+    "closedTitle": "Arena closed",
+    "closedBody": "The timer hit zero",
+    "ended": "Ended",
+    "liveCountdown": "Live countdown",
+    "urgentNote": "Final stretch — lock in soon",
+    "normalNote": "Closes when this hits zero",
+    "hot": "Hot",
+    "days": "Days",
+    "hours": "Hours",
+    "mins": "Mins",
+    "secs": "Secs",
+    "ariaRemaining": "Time remaining {days} days {hours}:{minutes}:{seconds}"
+  },
+  "BidPicker": {
+    "yourNumber": "Your sealed number",
+    "yourBidLabel": "Your Bid",
+    "yourBidPlaceholder": "Enter Your Bid",
+    "unitHint": "ETB · hidden until the arena closes",
+    "adjustLabel": "Adjust your number",
+    "decreaseAria": "Decrease by {step}",
+    "increaseAria": "Increase by {step}",
+    "rangeError": "Enter any amount from {min}.00 to {max}.00 ETB",
+    "rangeHint": "Any amount from {min}.00–{max}.00 ETB",
+    "quickPicks": "Quick picks"
+  },
+  "AuctionDetail": {
+    "back": "Back to arenas",
+    "backShort": "Arenas",
+    "notFound": "This arena couldn't be found.",
+    "sealedLabel": "Sealed",
+    "closedLabel": "Closed",
+    "liveLabel": "Live",
+    "bidFeeLabel": "Bid fee",
+    "sealedBidsLabel": "Sealed bids",
+    "endsIn": "Ends in {days} days",
+    "ruleNote": "Lowest unique number wins when the {days}-day clock ends. Your bid stays sealed — pick carefully between 0.00 and {maxBid}.00 ETB.",
+    "overviewTitle": "Product overview",
+    "crumbs": {
+      "home": "Home",
+      "arenas": "Arenas"
+    },
+    "info": {
+      "eyebrow": "Arena / Auction Information",
+      "title": "Auction Information",
+      "auctionId": "Auction ID",
+      "auctionDate": "Auction Date",
+      "endsAt": "Auction Ends",
+      "lastUpdate": "Last Auction Update"
+    },
+    "specsEyebrow": "Product / Key Specifications",
+    "specsTitle": "Key Specifications",
+    "specTabs": {
+      "overview": "Overview",
+      "rules": "Arena Rules",
+      "delivery": "Delivery"
+    },
+    "specs": {
+      "category": "Category",
+      "brand": "Brand",
+      "condition": "Condition",
+      "retailValue": "Retail value",
+      "warranty": "Warranty",
+      "deliveryLocation": "Delivery location",
+      "quantity": "Quantity available",
+      "bidGrid": "Bid grid",
+      "arenaLength": "Arena length"
+    },
+    "termsPreview": {
+      "title": "Before you bid",
+      "body": "By entering this arena you agree to BidClub's sealed-bid rules: the winner is the lowest amount only one participant chose, and the winner pays their bid amount to claim the prize.",
+      "link": "Read full terms",
+      "readMore": "Read more",
+      "readLess": "Read less"
+    },
+    "specValues": {
+      "conditionNew": "New",
+      "deliveryEthiopia": "Ethiopia-wide"
+    },
+    "statusLabel": "Status",
+    "acceptTermsCta": "Accept the terms to continue",
+    "goToBidding": "Go to bidding",
+    "closedCta": "This arena has closed",
+    "viewResultCta": "View result"
+  },
+  "AuctionBid": {
+    "title": "Place sealed bid",
+    "feeNote": "This arena charges {fee} ETB per bid.",
+    "bidsCount": "{count, plural, one {# Bid} other {# Bids}}",
+    "timeLeft": "Time Left",
+    "saleStatus": "Sale Status",
+    "saleStatusValue": "Sealed Auction",
+    "placeBidCta": "Place Bid",
+    "legalNote": "Every bid is legally binding and final.",
+    "learnMore": "Learn more",
+    "saveAria": "Save arena",
+    "copyLinkAria": "Copy link",
+    "shareAria": "Share",
+    "copied": "Link copied",
+    "bidLocked": "Bid locked in. Stay sealed until the reveal.",
+    "loginPrompt": "Log in",
+    "loginSuffix": "to place a sealed bid.",
+    "activateCta": "Activate your account to bid",
+    "closedNotice": "This arena has closed.",
+    "bidNow": "Bid now · {amount} ETB",
+    "bidFailed": "Bid failed",
+    "yourBids": {
+      "eyebrow": "Private / Bid history",
+      "title": "Your bids",
+      "subtitle": "Only visible to you",
+      "historyLabel": "Your sealed numbers",
+      "empty": "No sealed bids here yet.",
+      "bidLabel": "Bid {n}",
+      "footer": "{count, plural, one {# sealed number locked} other {# sealed numbers locked}}"
+    },
+    "feeChip": {
+      "label": "Per sealed bid",
+      "hint": "Charged when you lock a number"
+    },
+    "dock": {
+      "sealedFee": "Sealed · {fee} ETB fee",
+      "bid": "Bid",
+      "loginCta": "Log in to bid →",
+      "activateCta": "Activate to bid →"
+    },
+    "confirmDialog": {
+      "title": "Confirm sealed bid",
+      "description": "You'll pay {fee} ETB and lock {amount} ETB as your sealed number.",
+      "cancel": "Cancel",
+      "confirm": "Pay {fee} ETB & bid",
+      "locking": "Locking…"
+    }
+  },
+  "Auth": {
+    "signup": {
+      "eyebrow": "Join BidClub",
+      "title": "Create your seat",
+      "subtitle": "Sign up free, activate once, then lock sealed bids on live prize arenas.",
+      "benefitsTitle": "Why join",
+      "benefits": [
+        {
+          "title": "One seat, every arena",
+          "body": "A single BidClub profile joins every live auction — no re-signing up per prize."
+        },
+        {
+          "title": "Activate once · {registrationFee} ETB",
+          "body": "One-time activation unlocks arenas for good. No subscriptions."
+        },
+        {
+          "title": "Then {bidFee} ETB per sealed bid",
+          "body": "You only pay when you lock a number. Pick carefully — uniqueness wins."
+        }
+      ],
+      "fields": {
+        "displayName": "Display name",
+        "displayNamePlaceholder": "How winners will see you",
+        "email": "Email",
+        "emailPlaceholder": "you@example.com",
+        "phone": "Phone number",
+        "phonePlaceholder": "09xx xxx xxx",
+        "password": "Password",
+        "passwordPlaceholder": "At least 8 characters"
+      },
+      "submit": "Continue to activation",
+      "submitting": "Creating account…",
+      "haveAccount": "Already have an account?",
+      "logIn": "Log in"
+    },
+    "login": {
+      "eyebrow": "BidClub",
+      "title": "Welcome back",
+      "subtitle": "Log in to lock sealed bids, track your numbers, and catch winners the moment arenas close.",
+      "fields": {
+        "email": "Email",
+        "emailPlaceholder": "you@example.com",
+        "phone": "Phone number",
+        "phonePlaceholder": "09xx xxx xxx",
+        "password": "Password",
+        "passwordPlaceholder": "••••••••"
+      },
+      "submit": "Log in",
+      "submitting": "Signing in…",
+      "noAccount": "New to BidClub?",
+      "createAccount": "Create an account",
+      "sealedPlayTitle": "Sealed play",
+      "sealedPlayBody": "Every number you lock stays private until the countdown ends. The <b>lowest unique bid</b> wins — careful thinking beats bidding high.",
+      "perks": [
+        { "title": "Anonymous", "body": "Bids stay sealed" },
+        { "title": "Fair close", "body": "Clock decides, not volume" }
+      ]
+    },
+    "errors": {
+      "invalidCredentials": "That email or password doesn't match our records.",
+      "checkDetails": "Check your details and try again",
+      "signupFailed": "Sign up failed. Please try again.",
+      "loginFailed": "Sign in failed. Please try again.",
+      "required": "This field is required",
+      "invalidEmail": "Enter a valid email address",
+      "invalidPhone": "Enter a valid Ethiopian phone number",
+      "passwordTooShort": "Password must be at least 8 characters"
+    }
+  },
+  "Profile": {
+    "signedOut": {
+      "title": "Sign in required",
+      "body": "Log in to see activation, sealed bid history, and payments.",
+      "login": "Log in",
+      "createAccount": "Create account"
+    },
+    "seat": {
+      "eyebrow": "Your seat",
+      "activated": "Activated",
+      "inactive": "Inactive",
+      "since": "Since {date}",
+      "activate": "Activate · {fee} ETB",
+      "browseArenas": "Browse arenas",
+      "winners": "Winners",
+      "signOut": "Sign out",
+      "phoneLabel": "Phone"
+    },
+    "stats": {
+      "sealedBids": "Sealed bids",
+      "arenasPlayed": "Arenas played",
+      "bidSpend": "Bid spend",
+      "seatFee": "Seat fee",
+      "paid": "Paid"
+    },
+    "activateBanner": {
+      "title": "Activate to unlock arenas",
+      "body": "One-time {fee} ETB seat fee. Per-bid fees vary by product.",
+      "cta": "Activate now"
+    },
+    "activity": {
+      "eyebrow": "Activity",
+      "title": "Your sealed bids",
+      "more": "More",
+      "emptyTitle": "No bids yet",
+      "emptyBody": "Enter an arena and lock your first sealed number.",
+      "browse": "Browse arenas",
+      "feeNote": "fee {fee} ETB",
+      "fallbackTitle": "Arena"
+    },
+    "wallet": {
+      "eyebrow": "Wallet",
+      "title": "Recent payments",
+      "emptyTitle": "No payments yet",
+      "emptyBody": "Activation and bid fees will show up here.",
+      "registration": "Seat activation",
+      "bidFee": "Sealed bid fee"
+    }
+  },
+  "Winners": {
+    "eyebrow": "Reveal board",
+    "title": "Recent winners",
+    "subtitle": "Closed arenas and the sealed bid that took each prize — lowest unique number, revealed only after the {days}-day timer.",
+    "count": "{count, plural, one {# result} other {# results}}",
+    "errorTitle": "Couldn't load winners",
+    "errorBody": "{error}",
+    "emptyTitle": "No winners yet",
+    "emptyBody": "When an arena's {days}-day clock ends, the lowest unique bid lands here with the prize and winning price.",
+    "browseLive": "Browse live arenas"
+  },
+  "RegisterPay": {
+    "unlocks": [
+      {
+        "title": "Every live arena, instantly",
+        "body": "No per-prize join fees — one activation opens current and future auctions."
+      },
+      {
+        "title": "One-time fee, for life",
+        "body": "No subscriptions or renewals. Pay once and your seat never expires."
+      },
+      {
+        "title": "Then {bidFee} ETB per sealed bid",
+        "body": "Activation gets you in. You only spend more when you lock a number."
+      }
+    ],
+    "signedOut": {
+      "eyebrow": "Activation",
+      "title": "Log in to activate",
+      "body": "You'll need a BidClub account before you can pay the one-time seat fee.",
+      "cta": "Log in to continue"
+    },
+    "alreadyPaid": {
+      "eyebrow": "Activation",
+      "title": "You're already activated",
+      "body": "Your BidClub seat is live. Jump into an arena and lock your first sealed bid.",
+      "statusBadge": "Seat active",
+      "paidAmount": "{fee} ETB paid",
+      "browseLive": "Browse live arenas",
+      "viewProfile": "View my profile"
+    },
+    "form": {
+      "eyebrow": "One-time activation",
+      "title": "Activate your seat",
+      "body": "A single payment unlocks every arena BidClub runs — no monthly fees.",
+      "unlocksTitle": "What {fee} ETB unlocks",
+      "ruleNoteTitle": "Sealed bidding",
+      "ruleNoteBody": "Once you're in, every bid you lock is sealed. The <b>lowest unique bid</b> wins — a careful uncommon number beats a big one.",
+      "feeLabel": "Activation fee",
+      "pay": "Pay {fee} ETB & activate",
+      "processing": "Processing…",
+      "mockNote": "Mock payment for development — no real money is charged.",
+      "paymentFailed": "Payment failed. Please try again."
+    }
+  },
+  "HowItWorks": {
+    "title": "How it works",
+    "intro": "BidClub is a lowest-unique-bid platform. Pick a sealed number that nobody can see, pay a small participation fee per bid, and if your number is the lowest one that nobody else picked, you win — then pay your winning bid amount to claim the prize.",
+    "steps": {
+      "eyebrow": "Three moves to a win",
+      "items": [
+        {
+          "title": "Choose your bid amount",
+          "body": "Pick any amount from 0.00 up to {maxBid}.00 ETB. Nobody else can see what you choose; it stays private until the arena closes."
+        },
+        {
+          "title": "Pay the bid fee",
+          "body": "Each sealed bid costs a small participation fee (often around {bidFee} ETB, set per product). You can place as many sealed bids as you like before the timer ends."
+        },
+        {
+          "title": "Lowest unique bid wins",
+          "body": "When the {days}-day timer hits zero, BidClub reveals every sealed bid. The lowest amount that only one person chose wins the prize."
+        }
+      ]
+    },
+    "example": {
+      "title": "See it in action",
+      "bidsLabel": "Sealed bids placed",
+      "bids": "2, 2, 4, 5, 5, 7",
+      "explanation": "2 was picked by two different bidders, so both 2s are eliminated. 5 was also picked twice, so it's out too. 4 and 7 were each picked by only one bidder, which makes them unique — and since 4 is lower than 7, 4 wins the prize."
+    },
+    "activateOnce": "Activate once for {registrationFee} ETB to join every arena.",
+    "winnerPays": "If you win, you pay your winning bid amount ({amount} ETB) to receive the prize."
+  },
+  "Footer": {
+    "tagline": "BidClub · sealed lowest-unique arenas",
+    "blurb": "Sealed-bid arenas in Ethiopian birr. Lock a private number, stay anonymous, and win with the lowest unique bid.",
+    "explore": {
+      "heading": "Explore",
+      "home": "Home",
+      "arenas": "Arenas",
+      "winners": "Winners",
+      "howItWorks": "How it works"
+    },
+    "account": {
+      "heading": "Account",
+      "login": "Log in",
+      "signup": "Sign up",
+      "profile": "Profile"
+    },
+    "product": {
+      "heading": "Product",
+      "arenas": "Arenas",
+      "winners": "Winners",
+      "howItWorks": "How it works",
+      "activate": "Activate"
+    },
+    "legal": {
+      "heading": "Legal",
+      "terms": "Terms of service",
+      "privacy": "Privacy policy",
+      "refunds": "Refund policy"
+    },
+    "company": {
+      "heading": "Company",
+      "about": "About BidClub",
+      "contact": "Contact us",
+      "faq": "FAQ"
+    },
+    "copyright": "© {year} BidClub. All rights reserved.",
+    "disclaimer": "BidClub is a skill-based lowest-unique-bid platform operating in Ethiopia. You must be 18 or older to participate."
+  },
+  "Terms": {
+    "title": "Terms of Service",
+    "updated": "Last updated: {date}",
+    "acceptLabel": "I have read and agree to the {termsLink}",
+    "termsLinkText": "Terms of Service",
+    "requiredError": "You must accept the Terms of Service to continue"
+  },
+  "Language": {
+    "en": "English",
+    "am": "Amharic",
+    "switchLabel": "Language"
+  }
+}

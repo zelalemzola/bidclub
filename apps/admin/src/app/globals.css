@@ -1,0 +1,165 @@
+@import "@bidclub/ui/globals.css";
+
+@source "../../../../packages/ui/src";
+@source "../";
+
+/**
+ * BidClub Admin — Fourty-inspired operator console
+ * Soft slate surfaces, navy sidebar, lime accent, IBM Plex typography.
+ */
+@theme inline {
+  --font-sans: var(--font-ibm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-ibm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-ibm-mono), ui-monospace, monospace;
+  --font-nav: var(--font-dm-sans), var(--font-ibm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-heading);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: var(--destructive);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+
+  /* Keep BidClub token aliases used by shared UI components */
+  --color-ink: var(--foreground);
+  --color-ink-soft: var(--muted-foreground);
+  --color-mute: var(--muted-foreground);
+  --color-line: var(--border);
+  --color-cream: var(--background);
+  --color-cream-deep: var(--muted);
+  --color-night: var(--primary);
+  --color-paper: var(--card);
+  --color-gold: var(--accent);
+  --color-gold-bright: oklch(0.55 0.14 125);
+  --color-gold-deep: oklch(0.62 0.16 125);
+  --color-gold-dim: oklch(0.48 0.12 125);
+  --color-danger: var(--destructive);
+  --color-success: oklch(0.55 0.12 160);
+  --color-panel: var(--card);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.625rem;
+  --radius-xl: 0.75rem;
+}
+
+:root {
+  --background: oklch(0.955 0.012 125);
+  --foreground: oklch(0.27 0.03 145);
+  --card: oklch(0.985 0.006 125);
+  --card-foreground: oklch(0.27 0.03 145);
+  --primary: oklch(0.28 0.04 145);
+  --primary-foreground: oklch(0.98 0.01 125);
+  --secondary: oklch(0.93 0.014 125);
+  --secondary-foreground: oklch(0.3 0.04 145);
+  --muted: oklch(0.935 0.012 125);
+  --muted-foreground: oklch(0.48 0.025 145);
+  --accent: oklch(0.78 0.18 125);
+  --accent-foreground: oklch(0.22 0.05 145);
+  --destructive: oklch(0.55 0.2 25);
+  --border: oklch(0.86 0.016 125);
+  --input: oklch(0.91 0.012 125);
+  --ring: oklch(0.62 0.14 125);
+  --chart-1: oklch(0.32 0.05 145);
+  --chart-2: oklch(0.78 0.18 125);
+  --chart-3: oklch(0.55 0.08 160);
+  --chart-4: oklch(0.6 0.1 100);
+  --chart-5: oklch(0.5 0.06 200);
+  --sidebar: oklch(0.26 0.035 145);
+  --sidebar-foreground: oklch(0.96 0.01 125);
+  --sidebar-primary: oklch(0.78 0.18 125);
+  --sidebar-primary-foreground: oklch(0.22 0.05 145);
+  --sidebar-accent: oklch(0.33 0.035 145);
+  --sidebar-accent-foreground: oklch(0.96 0.01 125);
+  --sidebar-border: oklch(0.34 0.03 145);
+  --radius: 0.375rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    background: var(--background);
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-heading,
+  .font-display {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
+  .font-nav {
+    font-family: var(--font-nav);
+  }
+
+  .font-mono,
+  .font-figure {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .panel {
+    @apply min-w-0 rounded-lg border border-border/80 bg-card shadow-sm;
+    box-shadow:
+      0 1px 2px rgba(15, 23, 42, 0.04),
+      0 8px 24px rgba(15, 23, 42, 0.05);
+  }
+
+  .panel-flat {
+    @apply rounded-lg border border-border/80 bg-card shadow-none;
+  }
+
+  .mobile-card {
+    @apply rounded-lg border border-border/70 bg-card p-4 shadow-sm;
+    box-shadow:
+      0 1px 2px rgba(15, 23, 42, 0.04),
+      0 6px 16px rgba(15, 23, 42, 0.05);
+  }
+
+  .table-shell {
+    @apply -mx-1 overflow-x-auto sm:mx-0;
+  }
+
+  .gold-fill {
+    background: linear-gradient(165deg, #d8ff5c 0%, #c5f042 55%, #9bc41e 100%);
+    color: #101210;
+  }
+}

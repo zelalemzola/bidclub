@@ -1,0 +1,5 @@
+# Minimal Supabase CLI config placeholder.
+# Link your project with `supabase link` when ready.
+
+[project]
+id = "bidclub"
